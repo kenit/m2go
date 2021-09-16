@@ -1,4 +1,4 @@
-package magento2
+package m2go
 
 type CustomAttributes struct {
 	AttributeCode string `json:"attribute_code"`

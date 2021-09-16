@@ -1,4 +1,4 @@
-package magento2
+package m2go
 
 type ConfigurableProductOption struct {
 	ID                  int         `json:"id,omitempty"`

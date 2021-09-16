@@ -1,4 +1,4 @@
-module github.com/hermsi1337/go-magento2
+module github.com/kenitchiu/m2go
 
 require (
 	github.com/pkg/errors v0.9.1

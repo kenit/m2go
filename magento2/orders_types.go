@@ -1,4 +1,4 @@
-package magento2
+package m2go
 
 type Order struct {
 	AdjustmentNegative                      float64         `json:"adjustment_negative,omitempty"`

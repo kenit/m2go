@@ -1,4 +1,4 @@
-package magento2
+package m2go
 
 type AddProductPayload struct {
 	Product     Product `json:"product"`

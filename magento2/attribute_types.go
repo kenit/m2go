@@ -1,4 +1,4 @@
-package magento2
+package m2go
 
 type createAttributePayload struct {
 	Attribute Attribute `json:"attribute"`

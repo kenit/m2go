@@ -1,4 +1,4 @@
-package magento2
+package m2go
 
 type AttributeSet struct {
 	AttributeSetID      int         `json:"attribute_set_id,omitempty"`
