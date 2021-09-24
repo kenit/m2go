@@ -1,4 +1,4 @@
-module github.com/kenitchiu/m2go
+module github.com/kenit/m2go
 
 require (
 	github.com/pkg/errors v0.9.1
