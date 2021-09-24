@@ -135,77 +135,7 @@ type Order struct {
 	XForwardedFor                           string          `json:"x_forwarded_for,omitempty"`
 	Items                                   []Item          `json:"items,omitempty"`
 	BillingAddress                          *BillingAddress `json:"billing_address,omitempty"`
-	Payment                                 *struct {
-		AccountStatus             string   `json:"account_status,omitempty"`
-		AdditionalData            string   `json:"additional_data,omitempty"`
-		AdditionalInformation     []string `json:"additional_information,omitempty"`
-		AddressStatus             string   `json:"address_status,omitempty"`
-		AmountAuthorized          float64  `json:"amount_authorized,omitempty"`
-		AmountCanceled            float64  `json:"amount_canceled,omitempty"`
-		AmountOrdered             float64  `json:"amount_ordered,omitempty"`
-		AmountPaid                float64  `json:"amount_paid,omitempty"`
-		AmountRefunded            float64  `json:"amount_refunded,omitempty"`
-		AnetTransMethod           string   `json:"anet_trans_method,omitempty"`
-		BaseAmountAuthorized      float64  `json:"base_amount_authorized,omitempty"`
-		BaseAmountCanceled        float64  `json:"base_amount_canceled,omitempty"`
-		BaseAmountOrdered         float64  `json:"base_amount_ordered,omitempty"`
-		BaseAmountPaid            float64  `json:"base_amount_paid,omitempty"`
-		BaseAmountPaidOnline      float64  `json:"base_amount_paid_online,omitempty"`
-		BaseAmountRefunded        float64  `json:"base_amount_refunded,omitempty"`
-		BaseAmountRefundedOnline  float64  `json:"base_amount_refunded_online,omitempty"`
-		BaseShippingAmount        float64  `json:"base_shipping_amount,omitempty"`
-		BaseShippingCaptured      float64  `json:"base_shipping_captured,omitempty"`
-		BaseShippingRefunded      float64  `json:"base_shipping_refunded,omitempty"`
-		CcApproval                string   `json:"cc_approval,omitempty"`
-		CcAvsStatus               string   `json:"cc_avs_status,omitempty"`
-		CcCidStatus               string   `json:"cc_cid_status,omitempty"`
-		CcDebugRequestBody        string   `json:"cc_debug_request_body,omitempty"`
-		CcDebugResponseBody       string   `json:"cc_debug_response_body,omitempty"`
-		CcDebugResponseSerialized string   `json:"cc_debug_response_serialized,omitempty"`
-		CcExpMonth                string   `json:"cc_exp_month,omitempty"`
-		CcExpYear                 string   `json:"cc_exp_year,omitempty"`
-		CcLast4                   string   `json:"cc_last4,omitempty"`
-		CcNumberEnc               string   `json:"cc_number_enc,omitempty"`
-		CcOwner                   string   `json:"cc_owner,omitempty"`
-		CcSecureVerify            string   `json:"cc_secure_verify,omitempty"`
-		CcSsIssue                 string   `json:"cc_ss_issue,omitempty"`
-		CcSsStartMonth            string   `json:"cc_ss_start_month,omitempty"`
-		CcSsStartYear             string   `json:"cc_ss_start_year,omitempty"`
-		CcStatus                  string   `json:"cc_status,omitempty"`
-		CcStatusDescription       string   `json:"cc_status_description,omitempty"`
-		CcTransID                 string   `json:"cc_trans_id,omitempty"`
-		CcType                    string   `json:"cc_type,omitempty"`
-		EcheckAccountName         string   `json:"echeck_account_name,omitempty"`
-		EcheckAccountType         string   `json:"echeck_account_type,omitempty"`
-		EcheckBankName            string   `json:"echeck_bank_name,omitempty"`
-		EcheckRoutingNumber       string   `json:"echeck_routing_number,omitempty"`
-		EcheckType                string   `json:"echeck_type,omitempty"`
-		EntityID                  int      `json:"entity_id,omitempty"`
-		LastTransID               string   `json:"last_trans_id,omitempty"`
-		Method                    string   `json:"method,omitempty"`
-		ParentID                  float64  `json:"parent_id,omitempty"`
-		PoNumber                  string   `json:"po_number,omitempty"`
-		ProtectionEligibility     string   `json:"protection_eligibility,omitempty"`
-		QuotePaymentID            float64  `json:"quote_payment_id,omitempty"`
-		ShippingAmount            float64  `json:"shipping_amount,omitempty"`
-		ShippingCaptured          float64  `json:"shipping_captured,omitempty"`
-		ShippingRefunded          float64  `json:"shipping_refunded,omitempty"`
-		ExtensionAttributes       *struct {
-			VaultPaymentToken *struct {
-				EntityID          int     `json:"entity_id,omitempty"`
-				CustomerID        float64 `json:"customer_id,omitempty"`
-				PublicHash        string  `json:"public_hash,omitempty"`
-				PaymentMethodCode string  `json:"payment_method_code,omitempty"`
-				Type              string  `json:"type,omitempty"`
-				CreatedAt         string  `json:"created_at,omitempty"`
-				ExpiresAt         string  `json:"expires_at,omitempty"`
-				GatewayToken      string  `json:"gateway_token,omitempty"`
-				TokenDetails      string  `json:"token_details,omitempty"`
-				IsActive          bool    `json:"is_active,omitempty"`
-				IsVisible         bool    `json:"is_visible,omitempty"`
-			} `json:"vault_payment_token,omitempty"`
-		} `json:"extension_attributes,omitempty"`
-	} `json:"payment,omitempty"`
+	Payment                                 *Payment `json:"payment,omitempty"`
 	StatusHistories     []StatusHistory `json:"status_histories,omitempty"`
 	ExtensionAttributes *struct {
 		ShippingAssignments []struct {
