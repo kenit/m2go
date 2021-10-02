@@ -47,7 +47,7 @@ type CreditMemo struct {
 	Subtotal                                float64           `json:"subtotal"`
 	SubtotalInclTax                         float64           `json:"subtotal_incl_tax"`
 	TaxAmount                               float64           `json:"tax_amount"`
-	TransactionID                           int64             `json:"transaction_id"`
+	TransactionID                           string            `json:"transaction_id"`
 	UpdatedAt                               string            `json:"updated_at"`
 	Items                                   []*CreditmemoItem `json:"items"`
 	Comments                                []struct {
@@ -84,39 +84,39 @@ type CreditMemo struct {
 }
 
 type CreditmemoItem struct {
-	AdditionalData                    string `json:"additional_data"`
-	BaseCost                          float64    `json:"base_cost"`
-	BaseDiscountAmount                float64    `json:"base_discount_amount"`
-	BaseDiscountTaxCompensationAmount float64    `json:"base_discount_tax_compensation_amount"`
-	BasePrice                         float64    `json:"base_price"`
-	BasePriceInclTax                  float64    `json:"base_price_incl_tax"`
-	BaseRowTotal                      float64    `json:"base_row_total"`
-	BaseRowTotalInclTax               float64    `json:"base_row_total_incl_tax"`
-	BaseTaxAmount                     float64    `json:"base_tax_amount"`
-	BaseWeeeTaxAppliedAmount          float64    `json:"base_weee_tax_applied_amount"`
-	BaseWeeeTaxAppliedRowAmnt         float64    `json:"base_weee_tax_applied_row_amnt"`
-	BaseWeeeTaxDisposition            float64    `json:"base_weee_tax_disposition"`
-	BaseWeeeTaxRowDisposition         float64    `json:"base_weee_tax_row_disposition"`
-	Description                       string `json:"description"`
-	DiscountAmount                    float64    `json:"discount_amount"`
-	EntityID                          int    `json:"entity_id"`
-	DiscountTaxCompensationAmount     float64    `json:"discount_tax_compensation_amount"`
-	Name                              string `json:"name"`
-	OrderItemID                       int    `json:"order_item_id"`
-	ParentID                          int    `json:"parent_id"`
-	Price                             float64    `json:"price"`
-	PriceInclTax                      float64    `json:"price_incl_tax"`
-	ProductID                         int    `json:"product_id"`
-	Qty                               int    `json:"qty"`
-	RowTotal                          float64    `json:"row_total"`
-	RowTotalInclTax                   float64    `json:"row_total_incl_tax"`
-	Sku                               string `json:"sku"`
-	TaxAmount                         float64    `json:"tax_amount"`
-	WeeeTaxApplied                    string `json:"weee_tax_applied"`
-	WeeeTaxAppliedAmount              float64    `json:"weee_tax_applied_amount"`
-	WeeeTaxAppliedRowAmount           float64    `json:"weee_tax_applied_row_amount"`
-	WeeeTaxDisposition                float64    `json:"weee_tax_disposition"`
-	WeeeTaxRowDisposition             float64    `json:"weee_tax_row_disposition"`
+	AdditionalData                    string  `json:"additional_data"`
+	BaseCost                          float64 `json:"base_cost"`
+	BaseDiscountAmount                float64 `json:"base_discount_amount"`
+	BaseDiscountTaxCompensationAmount float64 `json:"base_discount_tax_compensation_amount"`
+	BasePrice                         float64 `json:"base_price"`
+	BasePriceInclTax                  float64 `json:"base_price_incl_tax"`
+	BaseRowTotal                      float64 `json:"base_row_total"`
+	BaseRowTotalInclTax               float64 `json:"base_row_total_incl_tax"`
+	BaseTaxAmount                     float64 `json:"base_tax_amount"`
+	BaseWeeeTaxAppliedAmount          float64 `json:"base_weee_tax_applied_amount"`
+	BaseWeeeTaxAppliedRowAmnt         float64 `json:"base_weee_tax_applied_row_amnt"`
+	BaseWeeeTaxDisposition            float64 `json:"base_weee_tax_disposition"`
+	BaseWeeeTaxRowDisposition         float64 `json:"base_weee_tax_row_disposition"`
+	Description                       string  `json:"description"`
+	DiscountAmount                    float64 `json:"discount_amount"`
+	EntityID                          int     `json:"entity_id"`
+	DiscountTaxCompensationAmount     float64 `json:"discount_tax_compensation_amount"`
+	Name                              string  `json:"name"`
+	OrderItemID                       int     `json:"order_item_id"`
+	ParentID                          int     `json:"parent_id"`
+	Price                             float64 `json:"price"`
+	PriceInclTax                      float64 `json:"price_incl_tax"`
+	ProductID                         int     `json:"product_id"`
+	Qty                               int     `json:"qty"`
+	RowTotal                          float64 `json:"row_total"`
+	RowTotalInclTax                   float64 `json:"row_total_incl_tax"`
+	Sku                               string  `json:"sku"`
+	TaxAmount                         float64 `json:"tax_amount"`
+	WeeeTaxApplied                    string  `json:"weee_tax_applied"`
+	WeeeTaxAppliedAmount              float64 `json:"weee_tax_applied_amount"`
+	WeeeTaxAppliedRowAmount           float64 `json:"weee_tax_applied_row_amount"`
+	WeeeTaxDisposition                float64 `json:"weee_tax_disposition"`
+	WeeeTaxRowDisposition             float64 `json:"weee_tax_row_disposition"`
 	ExtensionAttributes               struct {
 		VertexTaxCodes   []string `json:"vertex_tax_codes"`
 		InvoiceTextCodes []string `json:"invoice_text_codes"`
