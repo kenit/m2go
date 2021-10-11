@@ -34,23 +34,23 @@ type ProductLinks struct {
 }
 
 type Product struct {
-	ID                  int                      `json:"id,omitempty"`
-	Sku                 string                   `json:"sku"`
-	Name                string                   `json:"name"`
-	AttributeSetID      int                      `json:"attribute_set_id"`
-	Price               float64                  `json:"price"`
-	Status              int                      `json:"status,omitempty"`
-	Visibility          int                      `json:"visibility,omitempty"`
-	TypeID              string                   `json:"type_id,omitempty"`
-	CreatedAt           string                   `json:"created_at,omitempty"`
-	UpdatedAt           string                   `json:"updated_at,omitempty"`
-	Weight              float64                  `json:"weight,omitempty"`
-	ExtensionAttributes map[string]interface{}   `json:"extension_attributes,omitempty"`
-	ProductLinks        []ProductLinks           `json:"product_links,omitempty"`
-	Options             []Options                `json:"options,omitempty"`
-	MediaGalleryEntries []MediaGalleryEntries    `json:"media_gallery_entries,omitempty"`
-	TierPrices          []TierPrices             `json:"tier_prices,omitempty"`
-	CustomAttributes    []map[string]interface{} `json:"custom_attributes,omitempty"`
+	ID                  int                        `json:"id,omitempty"`
+	Sku                 string                     `json:"sku"`
+	Name                string                     `json:"name"`
+	AttributeSetID      int                        `json:"attribute_set_id"`
+	Price               float64                    `json:"price"`
+	Status              int                        `json:"status,omitempty"`
+	Visibility          int                        `json:"visibility,omitempty"`
+	TypeID              string                     `json:"type_id,omitempty"`
+	CreatedAt           string                     `json:"created_at,omitempty"`
+	UpdatedAt           string                     `json:"updated_at,omitempty"`
+	Weight              float64                    `json:"weight,omitempty"`
+	ExtensionAttributes ProductExtensionAttributes `json:"extension_attributes,omitempty"`
+	ProductLinks        []ProductLinks             `json:"product_links,omitempty"`
+	Options             []Options                  `json:"options,omitempty"`
+	MediaGalleryEntries []MediaGalleryEntries      `json:"media_gallery_entries,omitempty"`
+	TierPrices          []TierPrices               `json:"tier_prices,omitempty"`
+	CustomAttributes    []map[string]interface{}   `json:"custom_attributes,omitempty"`
 }
 
 type Content struct {
@@ -127,4 +127,25 @@ type StockItem struct {
 
 type updateStockPayload struct {
 	StockItem StockItem `json:"stockItem"`
+}
+
+type BundleProductOptions struct {
+	OptionID     int            `json:"option_id"`
+	Position     int            `json:"position"`
+	ProductLinks []ProductLinks `json:"product_links"`
+	Required     bool           `json:"required"`
+	Sku          string         `json:"sku"`
+	Title        string         `json:"title"`
+	Type         string         `json:"type"`
+}
+type CategoryLinks struct {
+	CategoryID string `json:"category_id"`
+	Position   int    `json:"position"`
+}
+
+type ProductExtensionAttributes struct {
+	BundleProductOptions []BundleProductOptions `json:"bundle_product_options"`
+	CategoryLinks        []CategoryLinks        `json:"category_links"`
+	StockItem            StockItem              `json:"stock_item"`
+	WebsiteIds           []int                  `json:"website_ids"`
 }
