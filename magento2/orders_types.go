@@ -342,9 +342,9 @@ type OrdersProductOption struct {
 			} `json:"extension_attributes,omitempty"`
 		} `json:"custom_options,omitempty"`
 		BundleOptions []struct {
-			OptionID            float64   `json:"option_id,omitempty"`
-			OptionQty           float64   `json:"option_qty,omitempty"`
-			OptionSelections    []float64 `json:"option_selections,omitempty"`
+			OptionID            int   `json:"option_id,omitempty"`
+			OptionQty           int   `json:"option_qty,omitempty"`
+			OptionSelections    []int `json:"option_selections,omitempty"`
 			ExtensionAttributes *struct {
 			} `json:"extension_attributes,omitempty"`
 		} `json:"bundle_options,omitempty"`
