@@ -130,13 +130,13 @@ type updateStockPayload struct {
 }
 
 type BundleProductOptions struct {
-	OptionID     int            `json:"option_id"`
-	Position     int            `json:"position"`
-	ProductLinks []ProductLinks `json:"product_links"`
-	Required     bool           `json:"required"`
-	Sku          string         `json:"sku"`
-	Title        string         `json:"title"`
-	Type         string         `json:"type"`
+	OptionID     int                 `json:"option_id"`
+	Position     int                 `json:"position"`
+	ProductLinks []BundleProductLink `json:"product_links"`
+	Required     bool                `json:"required"`
+	Sku          string              `json:"sku"`
+	Title        string              `json:"title"`
+	Type         string              `json:"type"`
 }
 type CategoryLinks struct {
 	CategoryID string `json:"category_id"`
@@ -148,4 +148,16 @@ type ProductExtensionAttributes struct {
 	CategoryLinks        []CategoryLinks        `json:"category_links"`
 	StockItem            StockItem              `json:"stock_item"`
 	WebsiteIds           []int                  `json:"website_ids"`
+}
+
+type BundleProductLink struct {
+	CanChangeQuantity int     `json:"can_change_quantity"`
+	ID                string  `json:"id"`
+	IsDefault         bool    `json:"is_default"`
+	OptionID          int     `json:"option_id"`
+	Position          int     `json:"position"`
+	Price             float64 `json:"price"`
+	PriceType         int     `json:"price_type"`
+	Qty               int     `json:"qty"`
+	Sku               string  `json:"sku"`
 }
