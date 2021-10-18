@@ -135,8 +135,7 @@ type Item struct {
 	WeeeTaxDisposition                  float64 `json:"weee_tax_disposition,omitempty"`
 	WeeeTaxRowDisposition               float64 `json:"weee_tax_row_disposition,omitempty"`
 	Weight                              float64 `json:"weight,omitempty"`
-	ParentItem                          *struct {
-	} `json:"parent_item,omitempty"`
+	ParentItem                          *Item `json:"parent_item,omitempty"`
 	ProductOption       OrdersProductOption `json:"product_option,omitempty"`
 	ExtensionAttributes *struct {
 		GiftMessage *struct {

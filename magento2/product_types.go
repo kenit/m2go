@@ -50,7 +50,7 @@ type Product struct {
 	Options             []Options                  `json:"options,omitempty"`
 	MediaGalleryEntries []MediaGalleryEntries      `json:"media_gallery_entries,omitempty"`
 	TierPrices          []TierPrices               `json:"tier_prices,omitempty"`
-	CustomAttributes    []map[string]interface{}   `json:"custom_attributes,omitempty"`
+	CustomAttributes    []CustomAttributes        `json:"custom_attributes,omitempty"`
 }
 
 type Content struct {
