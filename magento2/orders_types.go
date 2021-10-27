@@ -108,7 +108,7 @@ type Order struct {
 	State                                   string          `json:"state,omitempty"`
 	Status                                  string          `json:"status,omitempty"`
 	StoreCurrencyCode                       string          `json:"store_currency_code,omitempty"`
-	StoreID                                 float64         `json:"store_id,omitempty"`
+	StoreID                                 int64           `json:"store_id,omitempty"`
 	StoreName                               string          `json:"store_name,omitempty"`
 	StoreToBaseRate                         float64         `json:"store_to_base_rate,omitempty"`
 	StoreToOrderRate                        float64         `json:"store_to_order_rate,omitempty"`
@@ -135,9 +135,9 @@ type Order struct {
 	XForwardedFor                           string          `json:"x_forwarded_for,omitempty"`
 	Items                                   []Item          `json:"items,omitempty"`
 	BillingAddress                          *BillingAddress `json:"billing_address,omitempty"`
-	Payment                                 *Payment `json:"payment,omitempty"`
-	StatusHistories     []StatusHistory `json:"status_histories,omitempty"`
-	ExtensionAttributes *struct {
+	Payment                                 *Payment        `json:"payment,omitempty"`
+	StatusHistories                         []StatusHistory `json:"status_histories,omitempty"`
+	ExtensionAttributes                     *struct {
 		ShippingAssignments []struct {
 			Shipping *struct {
 				Address *ShippingAddress `json:"address,omitempty"`
