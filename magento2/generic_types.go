@@ -13,13 +13,13 @@ type Payment struct {
 	AmountAuthorized          float64  `json:"amount_authorized"`
 	AmountCanceled            float64  `json:"amount_canceled"`
 	AmountOrdered             float64  `json:"amount_ordered"`
-	AmountPaID                int64    `json:"amount_paid"`
+	AmountPaID                float64    `json:"amount_paid"`
 	AmountRefunded            float64  `json:"amount_refunded"`
 	AnetTransMethod           string   `json:"anet_trans_method"`
 	BaseAmountAuthorized      float64  `json:"base_amount_authorized"`
 	BaseAmountCanceled        float64  `json:"base_amount_canceled"`
 	BaseAmountOrdered         float64  `json:"base_amount_ordered"`
-	BaseAmountPaID            int64    `json:"base_amount_paid"`
+	BaseAmountPaID            float64    `json:"base_amount_paid"`
 	BaseAmountPaidOnline      float64  `json:"base_amount_paid_online"`
 	BaseAmountRefunded        float64  `json:"base_amount_refunded"`
 	BaseAmountRefundedOnline  float64  `json:"base_amount_refunded_online"`
